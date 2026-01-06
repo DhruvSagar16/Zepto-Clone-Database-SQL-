@@ -8,10 +8,6 @@ CREATE TABLE Users(
 	CreatedAt DATETIME DEFAULT GETDATE() 
 );
 
---i forgot to write UNIQUE on email
---ALTER TABLE Users
---ADD CONSTRAINT UQ_Users_Email UNIQUE (Email);
-
 --2. Addresses Table
 CREATE TABLE Addresses(
 	AddressID INT IDENTITY(1,1) PRIMARY KEY,
@@ -116,4 +112,5 @@ CREATE TABLE Reviews(
 	Rating INT CHECK (Rating between 1 AND 5),
 	Comment NVARCHAR(255),
 	CreatedAt DATETIME DEFAULT GETDATE()
+
 );
